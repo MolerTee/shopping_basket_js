@@ -48,9 +48,9 @@ var basket = {
 
   getDiscount: function(loyalty){
     var basketTotal = basket.getTotal();
-    var discountOverTwenty = (basket.total / 100) * 90;
-    var discountOverTwentyLoyal = (basket.total / 100) * 85;
-    var discountLoyal = (basket.total / 100) * 95;
+    var discountOverTwenty = (basket.total * 0.9);
+    var discountOverTwentyLoyal = (basket.total * 0.85);
+    var discountLoyal = (basket.total * 0.95);
     if (basketTotal >= 20 && loyalty === false){
       basket.total = discountOverTwenty.toFixed(2);
     }else if (basketTotal >= 20 && loyalty === true){
